@@ -11,7 +11,7 @@ jobs:
           title: ${{on.rsshub.outputs.title}}
           description: ${{on.rsshub.outputs.description}}
           link: ${{on.rsshub.outputs.link}}
-          secret_id: ${{{secrets.SECRET_ID}}
+          secret_id: ${{secrets.SECRET_ID}}
           database_id: ${{secrets.DATABASE_ID}}
         run: 
           echo title: $title
