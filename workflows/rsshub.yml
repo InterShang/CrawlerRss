@@ -11,8 +11,9 @@ jobs:
           title: ${{on.rsshub.outputs.title}}
           description: ${{on.rsshub.outputs.description}}
           link: ${{on.rsshub.outputs.link}}
-        run: |
+          secret_id: ${{{secrets.SECRET_ID}}
+          database_id: ${{secrets.DATABASE_ID}}
+        run: 
           echo title: $title
           echo description: $description
           echo link: $link
-          curl wttr.in/Shanghai
