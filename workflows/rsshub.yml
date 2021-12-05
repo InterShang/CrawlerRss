@@ -60,4 +60,42 @@ jobs:
                   }
                 }"
 
+          echo "{
+            \"parent\": { \"database_id\": \"d97ed79270b84c2886de539b988d7cb3\" },
+            \"properties\": {
+                \"Title\": {
+                    \"type\": \"title\",
+                    \"title\": [
+                        {
+                            \"type\": \"text\",
+                            \"text\": {
+                                \"content\": \"$title\"
+                            }
+                        }
+                    ]
+                },
+                \"Description\": {
+                    \"type\": \"rich_text\",
+                    \"rich_text\": [
+                        {
+                            \"type\": \"text\",
+                            \"text\": {
+                                \"content\": \"$description\"
+                            }
+                        }
+                    ]
+                },
+                \"Url\": {
+                    \"type\": \"rich_text\",
+                    \"rich_text\": [
+                        {
+                            \"type\": \"text\",
+                            \"text\": {
+                                \"content\": \"$link\"
+                            }
+                        }
+                    ]
+                }
+            }
+          }"
           echo 'finished'
