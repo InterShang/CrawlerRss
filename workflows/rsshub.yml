@@ -41,7 +41,7 @@ jobs:
                               {
                                   \"type\": \"text\",
                                   \"text\": {
-                                      \"content\": \"$description\"
+                                      \"content\": \"to be continued\"
                                   }
                               }
                           ]
