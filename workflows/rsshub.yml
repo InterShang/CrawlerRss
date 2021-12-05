@@ -17,7 +17,6 @@ jobs:
           echo title: $title
           echo description: $description
           echo link: $link
-          curl wttr.in/Shanghai
           curl  -X POST https://api.notion.com/v1/pages \
                 -H "Authorization: Bearer $secret_id" \
                 -H "Content-Type: application/json" \
@@ -53,10 +52,11 @@ jobs:
                               {
                                   \"type\": \"text\",
                                   \"text\": {
-                                      \"content\": \"http:www.inter.com\"
+                                      \"content\": \"http:www.intermilan.com\"
                                   }
                               }
                           ]
                       }
                   }
                 }"
+          echo 'finished'
