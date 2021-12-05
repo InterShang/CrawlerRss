@@ -15,6 +15,8 @@ jobs:
           database_id: ${{secrets.DATABASE_ID}}
         run: | 
           locale
+          export LANG=zh_CN.UTF-8
+          locale
           echo title: $title
           echo description: $description
           echo link: $link
