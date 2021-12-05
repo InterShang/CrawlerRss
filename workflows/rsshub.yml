@@ -18,7 +18,7 @@ jobs:
           echo description: $description
           echo link: $link
           description_new=`echo $description | sed -e "s/\"/'/g" | sed -e "s/!//g"` 
-          echo description_new
+          echo $description_new
           curl  -X POST https://api.notion.com/v1/pages \
                 -H "Authorization: Bearer secret_ihJ6bmak2N3lZIZXVgFxEzVSEf3s1iUYUHjTvmaatZ7" \
                 -H "Content-Type: application/json" \
@@ -37,13 +37,222 @@ jobs:
                               }
                           ]
                       },
-                      \"Description\": {
+                      \"Description1\": {
                           \"type\": \"rich_text\",
                           \"rich_text\": [
                               {
                                   \"type\": \"text\",
                                   \"text\": {
                                       \"content\": \"${description_new:0:2000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description2\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:2000:4000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description3\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:4000:6000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description4\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:6000:8000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description5\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:8000:10000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description6\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:10000:12000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description7\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:12000:14000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description8\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:14000:16000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description9\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:16000:18000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description10\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:18000:20000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description11\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:20000:22000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description12\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:22000:24000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description13\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:24000:26000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description14\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:26000:28000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description15\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:28000:30000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description16\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:30000:32000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description17\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:32000:34000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description18\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:34000:36000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description19\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:36000:38000}\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Description20\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"${description_new:38000:40000}\"
                                   }
                               }
                           ]
