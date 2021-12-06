@@ -11,7 +11,7 @@ jobs:
           title: ${{on.rsshub.outputs.title}}
           description: ${{on.rsshub.outputs.description}}
           link: ${{on.rsshub.outputs.link}}
-          secret_id: ${{{secrets.SECRET_ID}}
+          secret_id: ${{secrets.SECRET_ID}}
           database_id: ${{secrets.DATABASE_ID}}
         run: | 
           echo title: $title
@@ -41,11 +41,11 @@ jobs:
           description19=$(echo $description_new | cut -c36001-38000)
           description20=$(echo $description_new | cut -c38001-40000)
           curl  -X POST https://api.notion.com/v1/pages \
-                -H "Authorization: Bearer secret_ihJ6bmak2N3lZIZXVgFxEzVSEf3s1iUYUHjTvmaatZ7" \
+                -H "Authorization: Bearer ${{ secrets.SECRET_ID }}" \
                 -H "Content-Type: application/json" \
                 -H "Notion-Version: 2021-08-16" \
                 --data "{
-                  \"parent\": { \"database_id\": \"d97ed79270b84c2886de539b988d7cb3\" },
+                  \"parent\": { \"database_id\": \"${{ secrets.DATABASE_ID }}\" },
                   \"properties\": {
                       \"Title\": {
                           \"type\": \"title\",
