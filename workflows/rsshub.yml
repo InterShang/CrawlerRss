@@ -33,7 +33,7 @@ jobs:
           description7=$(echo $description_new | cut -c12001-14000)
           description8=$(echo $description_new | cut -c14001-16000)
           description9=$(echo $description_new | cut -c16001-18000)
-          description10=$(echo $description_new | cut -18001-20000)
+          description10=$(echo $description_new | cut -c18001-20000)
           description11=$(echo $description_new | cut -c20001-18000)
           description12=$(echo $description_new | cut -c22001-24000)
           description13=$(echo $description_new | cut -c24001-26000)
