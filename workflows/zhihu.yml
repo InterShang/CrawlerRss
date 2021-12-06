@@ -46,7 +46,7 @@ jobs:
                 -H "Content-Type: application/json" \
                 -H "Notion-Version: 2021-08-16" \
                 --data "{
-                  \"parent\": { \"database_id\": \"${{ secrets.DATABASE_ID }}\" },
+                  \"parent\": { \"database_id\": \"${{ secrets.DATABASE_ID2 }}\" },
                   \"properties\": {
                       \"Title\": {
                           \"type\": \"title\",
