@@ -11,6 +11,7 @@ jobs:
           title: ${{on.rsshub.outputs.title}}
           description: ${{on.rsshub.outputs.description}}
           link: ${{on.rsshub.outputs.link}}
+          pubDate: ${{on.rsshub.outputs.pubDate}}
           secret_id: ${{secrets.SECRET_ID}}
           database_id: ${{secrets.DATABASE_ID}}
         run: | 
@@ -295,7 +296,7 @@ jobs:
                               {
                                   \"type\": \"text\",
                                   \"text\": {
-                                      \"content\": \"$current_time\"
+                                      \"content\": \"$pubDate\"
                                   }
                               }
                           ]
