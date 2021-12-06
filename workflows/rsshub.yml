@@ -14,15 +14,11 @@ jobs:
           secret_id: ${{{secrets.SECRET_ID}}
           database_id: ${{secrets.DATABASE_ID}}
         run: | 
-          #locale
-          #export LANG=zh_CN.UTF-8
-          #echo "not using"
-          #export LANG=en_US.UTF-8
-          #locale
           echo title: $title
           echo description: $description
           echo link: $link
           description_new=`echo $description | sed -e "s/\"/'/g" | sed -e "s/!//g"` 
+          current_time=`date +'%Y-%m-%d %H:%M:%S'`
           echo $description_new
           description1=$(echo $description_new | cut -c1-2000)
           description2=$(echo $description_new | cut -c2001-4000)
@@ -289,6 +285,17 @@ jobs:
                                   \"type\": \"text\",
                                   \"text\": {
                                       \"content\": \"$link\"
+                                  }
+                              }
+                          ]
+                      },
+                      \"Date\": {
+                          \"type\": \"rich_text\",
+                          \"rich_text\": [
+                              {
+                                  \"type\": \"text\",
+                                  \"text\": {
+                                      \"content\": \"$current_time\"
                                   }
                               }
                           ]
